@@ -7,6 +7,10 @@ const port = 3000;
 
 const url = '';
 
+app.listen(port, () => {
+    console.log(`localhost ${port}`);
+});
+
 app.get("/", async (req, res) => {
     try {
         const response = await axios.get(url);
@@ -20,9 +24,7 @@ app.get("/", async (req, res) => {
 
 });
 
-app.listen(port, () => {
-    console.log(`localhost ${port}`);
-})
+
 
 
 
