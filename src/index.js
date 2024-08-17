@@ -16,10 +16,12 @@ app.get("/", async (req, res) => {
         const response = await axios.get(url);
         const data = response.data;
 
-        fs.writeFileSync("data.json", JSON.stringify(data, null, 1));
+      fs.writeFileSync("data.json", JSON.stringify(data, null, 5));
         res.status(200).send(`data sudah ada`);
+        console.log('data berhasil di send');
     } catch (error) {
         res.status(500).send(`${error.message}`);
+        console.log(error.message);
     }
 
 });
