@@ -8,11 +8,8 @@ const ScrapData = async () => {
     try {
         const response = await axios.get(url);
         const data = response.data;
-
         const Load = cheerio.load(data);
-
         const ScrapData = []
-
         Load('.product-card').each((index, element) => {
               const title = Load(element).find('h6').text().trim();
               const price = Load(element).find('span').first().text().trim();
