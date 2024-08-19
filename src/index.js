@@ -2,7 +2,7 @@ const axios = require('axios');
 const fs = require('fs');
 const cheerio = require('cheerio');
 
-const url = 'https://www.octaveclothing.com/men';
+const url = '';
 
 const ScrapData = async () => {
     try {
